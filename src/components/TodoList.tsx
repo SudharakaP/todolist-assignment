@@ -17,6 +17,7 @@ function TodoList({ todos, deleteTodo, toggleComplete, toggleUrgent }: TodoListP
         <ul>
             {todos.map((todo) => (
                 <TodoItem
+                    key={todo.id} // each child in a list should have a unique "key" prop as otherwise there will be a React warning
                     todo={todo}
                     deleteTodo={deleteTodo}
                     toggleComplete={toggleComplete}
