@@ -28,9 +28,9 @@ function TodoItem({ todo, deleteTodo, toggleComplete, toggleUrgent }: TodoItemPr
                 <button onClick={() => toggleComplete(todo.id)}>
                     {todo.isCompleted ? 'Mark as Incomplete' : 'Mark as Complete'}
                 </button>
-                <button onClick={() => toggleUrgent(todo.id)}>
+                {!todo.isCompleted && <button onClick={() => toggleUrgent(todo.id)}>
                     {todo.isUrgent ? 'Mark as not Urgent' : 'Mark as Urgent'}
-                </button>
+                </button>}
                 {todo.isCompleted && <button onClick={() => deleteTodo(todo.id)}>Delete</button>}
             </div>
         </li>
