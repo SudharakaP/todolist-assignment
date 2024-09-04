@@ -20,7 +20,7 @@ const Banner: React.FC = () => {
             setCopyright(data.copyright);
         };
 
-        fetchImg();
+        void fetchImg();
 
         const handleResize = () => {
             const bannerElement = document.querySelector('.banner');
